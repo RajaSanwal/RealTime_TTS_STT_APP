@@ -34,7 +34,8 @@ import subprocess,sys
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 formatter = logging.Formatter('%(asctime)s:%(name)s:%(levelname)s:%(message)s:%(funcName)s')
-file_handler = logging.FileHandler('gppod_medicalGPT.log')
+#Set .log file path inside FileHandler
+file_handler = logging.FileHandler(path_to_your_log_file)
 file_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
 
