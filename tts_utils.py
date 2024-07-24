@@ -27,11 +27,14 @@ from typing import List
 
 
 
+# First you need to create .env file and set following variables in environment file
+# 1. OPEN_API_KEY
+# 2. MODEL_NAME ->> model name should be one of them ("mistral-medium-latest", "gpt-3.5-turbo", "gpt-4o")
 
 # Load environment variables from a .env file
 load_dotenv()
 # Set Google Cloud credentials for Text-to-Speech API
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = 'hybrid-hawk-408107-988b81dfb749.json'
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = path_to_your_google_cloud_credentials_json_file
 # model name for env
 model_name = os.getenv("MODEL_NAME")
 
@@ -41,7 +44,7 @@ model_name = os.getenv("MODEL_NAME")
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 formatter = logging.Formatter('%(asctime)s:%(name)s:%(levelname)s:%(message)s:%(funcName)s')
-file_handler = logging.FileHandler('gppod_medicalGPT.log')
+file_handler = logging.FileHandler(path_to_your_log_file)
 file_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
 
