@@ -6,7 +6,7 @@ Build an app which can covert user text into audio/speech called Text To Speech 
 # Technologies Used
 1. Python Programming Language
 2. Langchain Framework
-3. Generative AI (Large Language Models, Lanchain Expression Language)
+3. Generative AI (Large Language Models, Langchain Expression Language)
 4. Google Cloud Platform (GCP)
 5. Streamlit Framework
 6.  FASTAPI, AudioSegment
